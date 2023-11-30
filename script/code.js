@@ -193,3 +193,29 @@ fetch('https://randomuser.me/api?results=50')
 
 
 
+let myPromise = new Promise ( args ) 
+function args(resolve, reject){
+    let numb1 = +prompt("Enter only a number")
+    if(typeof numb1 == 'number')
+    resolve(`The entered number is ${numb1}`)
+reject(`Unfortunately ${numb1} is not a number`)
+}
+
+myPromise.then(
+    completed => console.log(completed),
+    rejected => console.log(rejected)
+)
+
+// myPromise.then(
+//     completed => console.log(completed),
+// ).catch(
+// rejected => console.log(rejected)
+// )
+
+//or
+
+// myPromise.then(
+//     (completed)=>{
+//         console.log(completed);
+//     }
+// )
